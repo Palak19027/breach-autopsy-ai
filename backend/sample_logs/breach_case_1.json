@@ -1,0 +1,29 @@
+[
+  {
+    "timestamp": "2025-01-01T10:00:00",
+    "event": "login",
+    "user": "attacker",
+    "details": { "ip": "1.2.3.4" },
+    "notes": "Initial login attempt"
+  },
+  {
+    "timestamp": "2025-01-01T10:02:00",
+    "event": "permission_granted",
+    "user": "attacker",
+    "details": { "level": "admin" },
+    "decision_issue": "Excessive privilege granted to attacker"
+  },
+  {
+    "timestamp": "2025-01-01T10:05:00",
+    "event": "data_access",
+    "user": "attacker",
+    "details": { "sensitive": true },
+    "decision_issue": "Sensitive data accessed without checks"
+  },
+  {
+    "timestamp": "2025-01-01T10:06:00",
+    "event": "alert_triggered",
+    "details": { "action": "ignored" },
+    "decision_issue": "Critical security alert ignored by staff"
+  }
+]
